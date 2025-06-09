@@ -12,10 +12,10 @@ export function Header() {
           <span className="font-headline text-2xl font-semibold text-primary">VeriCred</span>
         </Link>
         <nav className="flex items-center gap-4">
-          <Link href="/dashboard/student" legacyBehavior passHref>
+          <Link href="/dashboard/student">
             <Button variant="ghost">Student Dashboard</Button>
           </Link>
-          <Link href="/dashboard/university" legacyBehavior passHref>
+          <Link href="/dashboard/university">
             <Button variant="ghost">University Dashboard</Button>
           </Link>
           <ConnectWalletButton />
