@@ -7,7 +7,7 @@ export interface Certificate {
   issueDate: string; // YYYY-MM-DD
   issuerWalletAddress: string; // University wallet address
   issuerName: string; // University Name
-  certificateImage?: string; // URL to placeholder or IPFS image
+  certificateImage?: string; // URL to placeholder, IPFS image, or a data URI
   verificationLink?: string; // Link to mock "blockchain explorer"
   suggestedSkills?: string[];
 }
