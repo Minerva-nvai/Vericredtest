@@ -4,7 +4,7 @@ import { useSearchParams } from 'next/navigation';
 import { MainLayout } from '@/components/layout/MainLayout';
 import { CertificateCard } from '@/components/CertificateCard';
 import { useAppContext } from '@/context/AppContext';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { AlertCircle, CheckCircle2, Loader2, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
@@ -87,3 +87,4 @@ export default function VerifyCertificatePage() {
     </MainLayout>
   );
 }
+
