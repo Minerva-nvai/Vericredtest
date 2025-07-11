@@ -43,24 +43,24 @@ export function ConnectWalletButton() {
     return (
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" className="flex items-center gap-2">
+          <Button variant="secondary" className="flex items-center gap-2">
             <Avatar className="h-6 w-6">
               <AvatarImage src={`https://avatar.vercel.sh/${account}.png`} alt="User Avatar" />
-              <AvatarFallback>{account.substring(0,2).toUpperCase()}</AvatarFallback>
+              <AvatarFallback>{account.substring(2,4).toUpperCase()}</AvatarFallback>
             </Avatar>
             {`${account.substring(0, 6)}...${account.substring(account.length - 4)}`}
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-56">
-          <DropdownMenuLabel>Connected Account</DropdownMenuLabel>
+          <DropdownMenuLabel>Connected Wallet</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuItem disabled className="text-xs">
             {account}
           </DropdownMenuItem>
           <DropdownMenuSeparator />
-          <DropdownMenuItem onClick={disconnectWallet} className="text-destructive cursor-pointer">
+          <DropdownMenuItem onClick={disconnectWallet} className="cursor-pointer">
             <LogOut className="mr-2 h-4 w-4" />
-            Disconnect
+            Disconnect Wallet
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
@@ -68,7 +68,7 @@ export function ConnectWalletButton() {
   }
 
   return (
-    <Button onClick={connectWallet} variant="default">
+    <Button onClick={connectWallet} variant="secondary">
       <LogIn className="mr-2 h-4 w-4" /> Connect Wallet
     </Button>
   );

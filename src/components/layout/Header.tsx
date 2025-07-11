@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ConnectWalletButton } from '@/components/web3/ConnectWalletButton'; // To be created
-import { GraduationCap } from 'lucide-react';
+import { ConnectWalletButton } from '@/components/web3/ConnectWalletButton';
+import { GraduationCap, LogIn } from 'lucide-react';
+import { GoogleSignInButton } from '@/components/auth/GoogleSignInButton';
 
 export function Header() {
   return (
@@ -18,7 +19,10 @@ export function Header() {
           <Link href="/dashboard/university">
             <Button variant="ghost">University Dashboard</Button>
           </Link>
-          <ConnectWalletButton />
+          <div className="flex items-center gap-2">
+            <GoogleSignInButton />
+            <ConnectWalletButton />
+          </div>
         </nav>
       </div>
     </header>
