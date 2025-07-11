@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ConnectWalletButton } from '@/components/web3/ConnectWalletButton';
 import { GraduationCap, LogIn } from 'lucide-react';
 import { GoogleSignInButton } from '@/components/auth/GoogleSignInButton';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 export function Header() {
   return (
@@ -20,6 +21,7 @@ export function Header() {
             <Button variant="ghost">University Dashboard</Button>
           </Link>
           <div className="flex items-center gap-2">
+            <ThemeToggle />
             <GoogleSignInButton />
             <ConnectWalletButton />
           </div>
