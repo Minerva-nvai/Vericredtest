@@ -21,10 +21,10 @@ const issueCertificateSchema = z.object({
   degreeName: z.string().min(5, 'Degree name is required.'),
   department: z.string().min(3, 'Department is required.'),
   issueDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'Issue date must be YYYY-MM-DD.'),
-  certificateImageFile: z.instanceof(FileList)
-    .refine(files => files.length > 0, "Certificate image is required.")
-    .refine(files => files[0]?.type.startsWith("image/"), "File must be an image type (e.g., PNG, JPG, WEBP).")
-    .transform(files => files[0]), // Get the single File object
+  certificateImageFile: (typeof window === 'undefined' ? z.any() : z.instanceof(FileList))
+    .refine(files => files?.length > 0, "Certificate image is required.")
+    .refine(files => files?.[0]?.type.startsWith("image/"), "File must be an image type (e.g., PNG, JPG, WEBP).")
+    .transform(files => files?.[0]), // Get the single File object
   suggestedSkills: z.array(z.string()).optional(),
 });
 
