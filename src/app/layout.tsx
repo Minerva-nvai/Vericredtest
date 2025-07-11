@@ -5,7 +5,10 @@ import { AppProviders } from '@/context/AppProviders'; // To be created
 
 export const metadata: Metadata = {
   title: 'VeriCred - Web3 Verified Credentials',
-  description: 'Issue and verify soulbound NFT academic certificates on the blockchain.',
+  description: 'Issue and verify soulbound NFT academic certificates on the blockchain. Empowering students and simplifying verification for employers.',
+  verification: {
+    google: 'YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_KEY',
+  },
 };
 
 export default function RootLayout({
